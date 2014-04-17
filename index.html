@@ -1,0 +1,61 @@
+<!DOCTYPE HTML5>
+<html>
+	<head>
+		<title>Mumps Chart</title>
+		<script src="dygraph-combined.js"></script>
+		
+	</head>
+	<body>
+		<h2>Dygraph</h2>
+		<div id="dygraph"></div>
+		<script>
+		g = new Dygraph(document.getElementById("dygraph"),
+                  "data.csv",
+                  {});
+		</script>
+		
+		<h2>Iframe</h2>
+		<iframe width="600px" height="600px" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?containerId=googft-gviz-canvas&amp;viz=GVIZ&amp;t=LINE_AGGREGATE&amp;isXyPlot=true&amp;bsize=0&amp;q=select+col0%2C+col2%2C+col1+from+1N-y6Cbx27is-iGsRBCVjAVL_yUEIUDkwUtzwGPx3&amp;qrs=+where+col0+%3E%3D+&amp;qre=+and+col0+%3C%3D+&amp;qe=+order+by+col0+asc&amp;uiversion=2&amp;rstart=2014%2F3%2F6+0%3A0%3A0&amp;rend=2014%2F4%2F14+1%3A14%3A24&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=600&amp;height=600"></iframe>
+		
+		<p>At Ohio State university, the virus has affected 96 students, 13 staff members, one family member, and 22 with strong ties to the university community. The university-linked cases include residents in Columbus, Athens, Belmont, Delaware, Fairfield, Franklin, Hamilton, Licking, and Pickaway counties.<sup><a href="http://columbus.gov/Templates/Detail.aspx?id=69188">1</a></sup></p>
+		<div id='chart'>
+			<svg style='height:500px' />
+		</div>
+		<script>
+		/*
+d3.json('stackedAreaData.json', function(data) {
+  nv.addGraph(function() {
+    var chart = nv.models.stackedAreaChart()
+                  .margin({right: 100})
+                  .x(function(d) { return d[0] })   //We can modify the data accessor functions...
+                  .y(function(d) { return d[1] })   //...in case your data is formatted differently.
+                  .useInteractiveGuideline(true)    //Tooltips which show all data points. Very nice!
+                  .rightAlignYAxis(true)      //Let's move the y-axis to the right side.
+                  .transitionDuration(500)
+                  .showControls(true)       //Allow user to choose 'Stacked', 'Stream', 'Expanded' mode.
+                  .clipEdge(true);
+
+    //Format x-axis labels with custom function.
+    chart.xAxis
+        .tickFormat(function(d) { 
+          return d3.time.format('%x')(new Date(d)) 
+    });
+
+    chart.yAxis
+        .tickFormat(d3.format(',.2f'));
+
+    d3.select('#chart svg')
+      .datum(data)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+})
+
+*/
+		</script>
+	</body>
+</html>
+
