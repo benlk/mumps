@@ -1,0 +1,146 @@
+/************************************
+	
+	Based on uberwriter.css by Wolf Vollprecht
+	http://uberwriter.wolfvollprecht.de/
+	
+	A simple and clean stylesheet
+	for pure text and stuff
+	
+	Used under the GPL v2
+
+************************************/
+
+
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	font-family: Vollkorn, Georgia, Times, serif;
+	font-size: 16px;
+	color: #444;
+    width: 663px;
+    margin: 0 auto;
+    line-height: 1.4em;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+}
+
+h1 {
+	font-size: 1.714em;
+	line-height: 1.333em;
+	margin: 0;
+	margin-top: 1.111em;
+	font-weight: normal;
+	text-align: center;
+	font-variant:small-caps;
+}
+
+h2 {
+	font-size: 1.333em;
+	line-height: 1.5em;
+	margin-top: 1.333em;
+	margin-bottom: 1em;
+	font-weight: normal;
+	font-variant:small-caps;
+}
+
+h3 {
+	font-size: 1.147;
+	line-height: 1.4em;
+}
+a {
+	color: #000;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+a:hover, a:active {
+	color: #494;
+}
+blockquote {
+    border-left: 5px solid #666;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+p, li {
+    margin-top: 10px;
+}
+hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: none;
+    width: 70%;
+    border-top: 1px dotted #999;
+}
+   
+ol, ul {
+    margin: 1.143em 0 1.143em 40px;
+   	padding: 0 0 0 20px;
+}
+
+ol li, ul li{
+}
+
+code {
+	font-size: 14px;
+}
+
+pre {
+	background: #F3F3F3;
+	padding: 5px;
+	margin-left: -5px;
+}
+
+.title {
+	margin-bottom: 0px;
+}
+.author, .date {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	display: inline-block;
+	color: #777;
+	margin-bottom: 30px;
+}
+
+.author::after {
+	content: ' ,';
+}
+.figure {
+	display: inline-block;
+}
+img {
+	max-width: 600px;
+}
+.caption {
+	text-align: center;
+	background: #F6F6F6;
+}
+sup {
+	line-height: 0.8em;
+}
+sup a {
+	text-decoration: none;
+}
+
+@media screen and (max-width: 663px) {
+	body {
+		width: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+		
+		font-size: 1.1em;
+		line-height: 1.3em;
+		box-sizing: border-box;
+	}
+	ul, ol {
+		margin-left: 20px;
+	}
+}

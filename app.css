@@ -1,0 +1,15 @@
+#dygraph {
+	width: 60%;
+	text-align: center;
+	display: inline-block;
+}
+#dygraph-labels {
+	width: auto;
+	display: inline-block;
+	text-align: top;
+	vertical-align: top;
+}
+.dygraph-label {
+	font-weight: normal;
+}
+body {padding-top: 20px;}
