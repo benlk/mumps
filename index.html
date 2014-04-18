@@ -10,8 +10,10 @@
 		<h1>Mumps cases in central Ohio</h1>
 		<div id="dygraph"></div>
 		<div id="dygraph-labels"></div>
-		<p>At Ohio State University, the virus has affected 108 students, 15 staff members, two family members, and 24 with strong ties to the university community, with most affected OSU-affiliated persons living in Columbus. 91 females and 58 males are affected at OSU, from three to 58 years of age. The university-linked cases include residents in Columbus, Athens, Belmont, Delaware, Fairfield, Franklin, Hamilton, Licking, and Pickaway counties.<sup><a href="http://columbus.gov/Templates/Detail.aspx?id=69188">1</a></sup></p>
-		<p>Data taken from NBC4i reporting, based on <a href="https://twitter.com/ColumbusHealth">Columbus Public Health</a> data.<br>
+		<p>The first case of mumps detected in Franklin County was January 7, with the first case at OSU detected February 10.<sup><a href="">1</a></sup></p>
+		<p>At Ohio State University, the virus has affected 108 students, 15 staff members, two family members, and 24 with strong ties to the university community, with most affected OSU-affiliated persons living in Columbus. 91 females and 58 males are affected at OSU, from three to 58 years of age. The university-linked cases include residents in Columbus, Athens, Belmont, Delaware, Fairfield, Franklin, Hamilton, Licking, and Pickaway counties.<sup><a href="http://columbus.gov/Templates/Detail.aspx?id=69188">2</a></sup></p>
+		<p>Two cases have been reported in Olentangy Local Schools, leading school officials to tell students without the vaccine and with compromised immune systems to stay home. <sup><a href="http://www.dispatch.com/content/stories/local/2014/04/18/olentangy-students-without-mumps-vaccine-must-stay-home-for-25-days.html">3</a></sup></p>
+		<p>Chart data taken from <a href="https://twitter.com/ColumbusHealth">Columbus Public Health</a> data.<br>
 		Chart made with <a href="http://dygraphs.com/">Dygraph</a>.<br>
 		Source CSV available <a href="data.csv">here</a>.<br>
 		</p>
@@ -22,6 +24,10 @@
 
 
 		<script>
+		var colorSets = [
+			['#505050','#904040','#c00000','#00c0c0'],
+			null
+		]
 		g = new Dygraph(document.getElementById("dygraph"),
 			"data.csv",
 			{
@@ -31,7 +37,8 @@
 				labelsSeparateLines: true,
 				labelsShowZeroValues: true,
 				legend: "always",
-				width: "660px",
+				width: 660,
+				colors: colorSets[0]
 			});
 		</script>
 		

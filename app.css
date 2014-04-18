@@ -26,3 +26,15 @@ p.by a {
 	color: #777;
 	text-decoration: none;
 }
+
+@media screen and (min-width: 930px) {
+	#dygraph {
+		display: block;
+	}
+	#dygraph-labels {
+		display: block;
+		float: right;
+		margin-right: -120px;
+		width: 120px;
+	}
+}
