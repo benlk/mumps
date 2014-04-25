@@ -10,6 +10,35 @@
 		<h1>Mumps cases in Franklin and Delaware counties</h1>
 		<div id="dygraph-container"><div id="dygraph"></div></div>
 		<div id="dygraph-labels"></div>
+		
+		<script>
+		var colorSets = [
+			['#cccccc', // Days since March 0
+			 '#505050', // Non-OSU
+			 '#c00000', // OSU
+			 '#007db7', // CSCC
+			 '#00c000'], // Total
+			null
+		]
+		g = new Dygraph(document.getElementById("dygraph"),
+			"data.csv",
+			{
+				rightGap: 5,
+				hideOverlayOnMouseOut: false,
+				labelsDiv: "dygraph-labels",
+				labelsSeparateLines: true,
+				labelsShowZeroValues: true,
+				legend: "always",
+				colors: colorSets[0],
+				visibility: [false, true, true, true, true] /*,
+				showRangeSelector: true,
+				rangeSelectorHeight: 30,
+				rangeSelectorPlotStrokeColor: 'yellow',
+				rangeSelectorPlotFillColor: 'lightyellow'*/
+				// Commented, but useul in event of future data increases
+			});
+		</script>
+		
 		<p>The first case of mumps detected in Franklin County was January 7, with the first case at OSU detected February 10.</p>
 		<p>At Ohio State University, the virus has affected 115 students, 18 staff members, two family members, and 27 with strong ties to the university community, with most affected OSU-affiliated persons living in Columbus. 99 females and 63 males in the OSU community, from three to 58 years of age. The university-linked cases include residents in Columbus and Athens, Belmont, Clark, Delaware, Fairfield, Franklin, Hamilton, Licking, and Pickaway counties.<sup><a href="http://columbus.gov/Templates/Detail.aspx?id=69188">1</a></sup> Cases unrelated to Ohio State have been found in Ashland, Butler, Coshocton, Delaware, Lucas, Medina, Pickaway, Pike and Richland counties.<sup><a href="http://www.nbc4i.com/story/25322507/mumps-outbreak-grows-to-269-cases">2</a></sup></p>
 		<p>Three to four cases have been reported at Columbus State Community College.<sup><a href="http://www.nbc4i.com/story/25300367/mumps-outbreak-grows-to-253-cases">3</a></sup></p>
@@ -64,39 +93,11 @@
 		Source CSV available <a href="data.csv">here</a>.<br>
 		Suggestions and <a href="https://github.com/benlk/mumps/">pull requests</a> are welcome. 
 		</p>
+		
 		<p class="by">
 		<iframe src="http://ghbtns.com/github-btn.html?user=benlk&repo=mumps&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe><br>
 		Built by <a href="https://twitter.com/benlkeith">@benlkeith</a>
   		</p>
-
-
-		<script>
-		var colorSets = [
-			['#cccccc', // Days since March 0
-			 '#505050', // Non-OSU
-			 '#c00000', // OSU
-			 '#007db7', // CSCC
-			 '#00c000'], // Total
-			null
-		]
-		g = new Dygraph(document.getElementById("dygraph"),
-			"data.csv",
-			{
-				rightGap: 5,
-				hideOverlayOnMouseOut: false,
-				labelsDiv: "dygraph-labels",
-				labelsSeparateLines: true,
-				labelsShowZeroValues: true,
-				legend: "always",
-				colors: colorSets[0],
-				visibility: [false, true, true, true, true] /*,
-				showRangeSelector: true,
-				rangeSelectorHeight: 30,
-				rangeSelectorPlotStrokeColor: 'yellow',
-				rangeSelectorPlotFillColor: 'lightyellow'*/
-				// Commented, but useul in event of future data increases
-			});
-		</script>
 		
 	</body>
 </html>
