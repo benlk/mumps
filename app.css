@@ -57,6 +57,6 @@ p.by a {
 @media screen and (max-width: 663px){
 	#dygraph-container {
 		width: 100%;
-		height: 200px;
+		height: 300px;
 	}
 }
