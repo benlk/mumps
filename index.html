@@ -10,6 +10,7 @@
 		<h1>Mumps cases in Franklin and Delaware counties</h1>
 		<div id="dygraph-container"><div id="dygraph"></div></div>
 		<div id="dygraph-labels"></div>
+		<p class="by">Hover for specific points</p>
 		
 		<script>
 		var colorSets = [
@@ -30,7 +31,55 @@
 				labelsShowZeroValues: true,
 				legend: "always",
 				colors: colorSets[0],
-				visibility: [false, true, true, true, true] /*,
+				visibility: [false, true, true, true, true],
+				drawXGrid: false,
+				axes: {
+					includeZero: true,
+					y: {
+						valueFormatter: function(y) {
+							return '';
+						},
+						axisLabelFormatter: function(y) {
+							return '';
+						},
+						axisLineWidth: 0,
+						axisLineColor: '#ffffff',
+						yAxisLabelWidth: 0,
+						axisLabelWidth: 0,
+						drawYAxis: false,
+						drawGrid: false
+					},
+					y2: {
+						valueFormatter: function(y) {
+							return Math.round(y*0.1)/0.1;
+						},
+						axisLabelFormatter: function(y) {
+							return Math.round(y*0.1)/0.1;
+						},
+						drawGrid: true,
+						independentTicks: true
+					}
+					
+				},
+				'Non-OSU': {
+					axis: {
+						
+					}
+				},
+				'OSU': {
+					axis: 'Non-OSU'
+				},
+				'CSCC':{
+					axis: 'Non-OSU'
+				},
+				'Total': {
+					axis: 'Non-OSU'
+				},
+				'Days since March 0': {
+					axis: 'Non-OSU'
+				}
+				
+				/*,
 				showRangeSelector: true,
 				rangeSelectorHeight: 30,
 				rangeSelectorPlotStrokeColor: 'yellow',
