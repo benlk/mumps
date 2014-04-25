@@ -1,0 +1,99 @@
+<!DOCTYPE HTML5>
+<html>
+	<head>
+		<title>Mumps Chart</title>
+		<script src="dygraph-combined.js"></script>
+		<link rel="stylesheet" href="embed.css" type="text/css"></link>
+	</head>
+	<body>
+		<div id="dygraph-container"><div id="dygraph"></div></div>
+		<div id="dygraph-labels"></div>
+		<p class="by">Hover for specific points. <a href="http://benlk.github.io/mumps/">Source</a>.</p>
+		
+		<script>
+		var colorSets = [
+			['#cccccc', // Days since March 0
+			 '#505050', // Non-OSU
+			 '#c00000', // OSU
+			 '#007db7', // CSCC
+			 '#00c000'], // Total
+			null
+		]
+		g = new Dygraph(document.getElementById("dygraph"),
+			"data.csv",
+			{
+				rightGap: 5,
+				hideOverlayOnMouseOut: false,
+				labelsDiv: "dygraph-labels",
+				labelsSeparateLines: false,
+				labelsShowZeroValues: true,
+				legend: "always",
+				colors: colorSets[0],
+				visibility: [false, true, true, true, true],
+				drawXGrid: false,
+				axes: {
+					includeZero: true,
+					y: {
+						valueFormatter: function(y) {
+							return '';
+						},
+						axisLabelFormatter: function(y) {
+							return '';
+						},
+						axisLineWidth: 0,
+						axisLineColor: '#ffffff',
+						yAxisLabelWidth: 0,
+						axisLabelWidth: 0,
+						drawYAxis: false,
+						drawGrid: false
+					},
+					y2: {
+						valueFormatter: function(y) {
+							return Math.round(y*0.1)/0.1;
+						},
+						axisLabelFormatter: function(y) {
+							return Math.round(y*0.1)/0.1;
+						},
+						axisLineColor: '#ffffff',
+						axisLabelColor: '#555555',
+						drawGrid: true,
+						gridLineColor: '#999999',
+						independentTicks: true
+					},
+					x: {
+						axisLineColor: '#777777',
+						axisLabelColor: '#777777'
+					}
+					
+				},
+				'Non-OSU': {
+					axis: {
+						
+					}
+				},
+				'OSU': {
+					axis: 'Non-OSU'
+				},
+				'CSCC':{
+					axis: 'Non-OSU'
+				},
+				'Total': {
+					axis: 'Non-OSU',
+					strokeWidth: 2
+				},
+				'Days since March 0': {
+					axis: 'Non-OSU'
+				}
+				
+				/*,
+				showRangeSelector: true,
+				rangeSelectorHeight: 30,
+				rangeSelectorPlotStrokeColor: 'yellow',
+				rangeSelectorPlotFillColor: 'lightyellow'*/
+				// Commented, but useul in event of future data increases
+			});
+		</script>
+		
+	</body>
+</html>
+

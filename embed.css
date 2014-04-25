@@ -1,0 +1,64 @@
+html {
+}
+body {
+	width: 100%;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 50px;
+}
+
+#dygraph-container {
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 100px;
+	text-align: center;
+	display: block;
+	height: 100%;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+#dygraph {
+	position: absolute;
+	left: -50px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+#dygraph-labels {
+	width: auto;
+	display: inline-block;
+	text-align: top;
+	vertical-align: top;
+	padding-left: 5px;
+}
+.dygraph-label {
+	font-weight: normal;
+}
+body {}
+a:hover, a:active { 
+	color: #944;
+}
+p.by {
+	text-align: center;
+	margin: 0;
+	font-size: 0.8em;
+	color: #777;
+}
+p.by a {
+	color: #777;
+	text-decoration: underline;
+}
+
+@media screen and (min-width: 800px) {
+
+}
+@media screen and (min-width: 800px) and (max-width: 930px){
+}
+@media screen and (max-width: 663px){
+}
