@@ -1,7 +1,16 @@
-#dygraph {
-	width: 60%;
+#dygraph-container {
+	width: 100%;
 	text-align: center;
-	display: inline-block;
+	display: block;
+	height: 400px;
+	position: relative;
+}
+#dygraph {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
 }
 #dygraph-labels {
 	width: auto;
@@ -27,8 +36,8 @@ p.by a {
 	text-decoration: none;
 }
 
-@media screen and (min-width: 663px) {
-	#dygraph {
+@media screen and (min-width: 800px) {
+	#dygraph-container {
 		display: block;
 	}
 	#dygraph-labels {
@@ -39,12 +48,14 @@ p.by a {
 		width: 120px;
 	}
 }
-@media screen and (min-width: 663px) and (max-width: 930px){
+@media screen and (min-width: 800px) and (max-width: 930px){
 	body {
 		margin: 0 auto;
 		padding-right: 120px;
 	}
 }
 @media screen and (max-width: 663px){
-
+	#dygraph-container {
+		width: 100%;
+	}
 }

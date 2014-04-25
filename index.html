@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<h1>Mumps cases in Franklin and Delaware counties</h1>
-		<div id="dygraph"></div>
+		<div id="dygraph-container"><div id="dygraph"></div></div>
 		<div id="dygraph-labels"></div>
 		<p>The first case of mumps detected in Franklin County was January 7, with the first case at OSU detected February 10.</p>
 		<p>At Ohio State University, the virus has affected 115 students, 18 staff members, two family members, and 27 with strong ties to the university community, with most affected OSU-affiliated persons living in Columbus. 99 females and 63 males in the OSU community, from three to 58 years of age. The university-linked cases include residents in Columbus and Athens, Belmont, Clark, Delaware, Fairfield, Franklin, Hamilton, Licking, and Pickaway counties.<sup><a href="http://columbus.gov/Templates/Detail.aspx?id=69188">1</a></sup> Cases unrelated to Ohio State have been found in Ashland, Butler, Coshocton, Delaware, Lucas, Medina, Pickaway, Pike and Richland counties.<sup><a href="http://www.nbc4i.com/story/25322507/mumps-outbreak-grows-to-269-cases">2</a></sup></p>
@@ -88,7 +88,6 @@
 				labelsSeparateLines: true,
 				labelsShowZeroValues: true,
 				legend: "always",
-				width: 640,
 				colors: colorSets[0],
 				visibility: [false, true, true, true, true] /*,
 				showRangeSelector: true,
