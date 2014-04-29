@@ -9,6 +9,12 @@ If you'd like to contribute, throw a pull request my way.
 Embed away, though I may add a tracking object at some point in the future. 
 
     <iframe width="100%" height="400px" scrolling="no" frameborder="no" src="http://benlk.github.io/mumps/embed.html"></iframe>
+    
+## Building
+
+To run `screenshot.js` and create `og-img.jpg`, you must install [PhantomJS](http://phantomjs.org/). Once it is installed, run:
+
+    phantomjs screenshot.js
 
 ## License
 

@@ -1,9 +1,9 @@
 <!DOCTYPE HTML5>
 <html>
 	<head>
-		<title>Mumps Chart</title>
+		<title>Central Ohio Mumps Tracker</title>
 		<script src="dygraph-combined.js"></script>
-		<link rel="stylesheet" href="embed.css" type="text/css"></link>
+		<link rel="stylesheet" href="screenshot.css" type="text/css"></link>
 		
 		<meta property="og:title" content="Central Ohio Mumps Tracker" />
 		<meta property="og:type" content="website" />
@@ -12,8 +12,6 @@
 	</head>
 	<body>
 		<div id="dygraph-container"><div id="dygraph"></div></div>
-		<div id="dygraph-labels"></div>
-		<p class="by">Hover for specific points. <a href="http://benlk.github.io/mumps/">Source</a>.</p>
 		
 		<script>
 		var colorSets = [
@@ -28,11 +26,11 @@
 			"data.csv",
 			{
 				rightGap: 5,
-				hideOverlayOnMouseOut: false,
-				labelsDiv: "dygraph-labels",
+				hideOverlayOnMouseOut: true,
+				labelsDiv: "",
 				labelsSeparateLines: false,
 				labelsShowZeroValues: true,
-				legend: "always",
+				legend: "never",
 				colors: colorSets[0],
 				visibility: [false, true, true, true, true],
 				drawXGrid: false,
@@ -61,6 +59,7 @@
 						},
 						axisLineColor: '#ffffff',
 						axisLabelColor: '#555555',
+						axisLabelWidth: 0,
 						drawGrid: true,
 						gridLineColor: '#999999',
 						independentTicks: true
