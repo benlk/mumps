@@ -12,9 +12,10 @@ Embed away, though I may add a tracking object at some point in the future.
     
 ## Building
 
-To run `screenshot.js` and create `og-img.jpg`, you must install [PhantomJS](http://phantomjs.org/). Once it is installed, run:
+This has the option to generate new favicons and OpenGraph images at any time, using [PhantomJS](http://phantomjs.org/). Once it is installed, run:
 
     phantomjs screenshot.js
+    phantomjs favicon.js
 
 ## License
 
