@@ -58,11 +58,11 @@
 						drawGrid: false
 					},
 					y2: {
-						valueFormatter: function(y) {
-							return Math.round(y*0.1)/0.1;
-						},
 						axisLabelFormatter: function(y) {
 							return Math.round(y*0.1)/0.1;
+						},
+						valueFormatter: function(y) {
+							return y;
 						},
 						axisLineColor: '#ffffff',
 						axisLabelColor: '#555555',
