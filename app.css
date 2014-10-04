@@ -1,18 +1,27 @@
-#dygraph-container {
+h2.title {
+  text-align: center;
+}
+
+.dygraph-container, .dy2-container {
 	width: 100%;
 	text-align: center;
 	display: block;
-	height: 400px;
 	position: relative;
 }
-#dygraph {
+.dygraph-container {
+    height: 400px;
+}
+.dy2-container {
+    height: 200px;
+}
+#dygraph, #dy2 {
 	position: absolute;
 	left: -50px;
 	right: 0px;
 	top: 0px;
 	bottom: 0px;
 }
-#dygraph-labels {
+#dygraph-labels, #dy2-labels {
 	width: auto;
 	display: inline-block;
 	text-align: top;
@@ -37,14 +46,14 @@ p.by a {
 }
 
 @media screen and (min-width: 800px) {
-	#dygraph-container {
+	.dygraph-container, .dy2-container {
 		display: block;
 	}
-	#dygraph-labels {
+	#dygraph-labels, #dy2-labels {
 		display: block;
 		float: right;
 		margin-right: -120px;
-		margin-top: -240px;
+		margin-top: -200px;
 		width: 120px;
 	}
 }
@@ -55,7 +64,7 @@ p.by a {
 	}
 }
 @media screen and (max-width: 663px){
-	#dygraph-container {
+	.dygraph-container {
 		width: 100%;
 		height: 300px;
 	}

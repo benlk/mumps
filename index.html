@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<title>Central Ohio Mumps Tracker</title>
-		<script src="dygraph-combined.js"></script>
 		<link rel="stylesheet" href="uberwriter.css" type="text/css"></link>
 		<link rel="stylesheet" href="app.css" type="text/css"></link>
 		
@@ -23,97 +22,18 @@
 		<link rel="shortcut icon" href="./favicon.png">
 	</head>
 	<body>
-		<h1>Mumps cases in Central Ohio</h1>
-		<div id="dygraph-container"><div id="dygraph"></div></div>
+		<h2 class="title">Total Mumps cases in Central Ohio</h2>
+		<div class="dygraph-container"><div id="dygraph"></div></div>
 		<div id="dygraph-labels"></div>
-		<p class="by">Hover for specific points. Data based on Columbus Health reports.</p>
-		
-		<script>
-		var colorSets = [
-			['#cccccc', // Days since March 0
-			 '#505050', // Non-OSU
-			 '#c00000', // OSU
-			 '#007db7', // CSCC
-			 '#00c000'], // Total
-			null
-		]
-		g = new Dygraph(document.getElementById("dygraph"),
-			"data.csv",
-			{
-				rightGap: 5,
-				hideOverlayOnMouseOut: false,
-				labelsDiv: "dygraph-labels",
-				labelsSeparateLines: true,
-				labelsShowZeroValues: true,
-				legend: "always",
-				colors: colorSets[0],
-				visibility: [false, true, true, true, true],
-				drawXGrid: false,
-				axes: {
-					includeZero: true,
-					y: {
-						valueFormatter: function(y) {
-							return '';
-						},
-						axisLabelFormatter: function(y) {
-							return '';
-						},
-						axisLineWidth: 0,
-						axisLineColor: '#ffffff',
-						yAxisLabelWidth: 0,
-						axisLabelWidth: 0,
-						drawYAxis: false,
-						drawGrid: false
-					},
-					y2: {
-						axisLabelFormatter: function(y) {
-							return Math.round(y*0.1)/0.1;
-						},
-						valueFormatter: function(y) {
-							return y;
-						},
-						axisLineColor: '#ffffff',
-						axisLabelColor: '#555555',
-						drawGrid: true,
-						gridLineColor: '#999999',
-						independentTicks: true
-					},
-					x: {
-						axisLineColor: '#777777',
-						axisLabelColor: '#777777'
-					}
-					
-				},
-				'Non-OSU': {
-					axis: {
-						
-					}
-				},
-				'OSU': {
-					axis: 'Non-OSU'
-				},
-				'CSCC':{
-					axis: 'Non-OSU'
-				},
-				'Total': {
-					axis: 'Non-OSU',
-					strokeWidth: 2
-				},
-				'Days since March 0': {
-					axis: 'Non-OSU'
-				}
-				
-				/*,
-				showRangeSelector: true,
-				rangeSelectorHeight: 30,
-				rangeSelectorPlotStrokeColor: 'yellow',
-				rangeSelectorPlotFillColor: 'lightyellow'*/
-				// Commented, but useul in event of future data increases
-			});
-		</script>
+		<p class="by">Total cases reported. Hover for specific points. Data based on Columbus Health reports.</p>
 		
 		<p>The first case of mumps detected in Franklin County was January 7, with the first case at OSU detected February 10. Columbus Public Health provided the <a href="https://twitter.com/CPHOEP/status/517344474104483840">final update</a> on October 1, 2014. No new cases had been reported since September 17. </p>
 		<p>At Ohio State University, the virus has affected 163 students, 34 staff members, three family members, and 55 with strong ties to the university community, with 84.7 percent of affected OSU-affiliated persons living in Columbus. </p>
+        <h2 class="title">New cases since previous report</h2>
+        <div class="dy2-container"><div id="dy2"></div></div>
+		<div id="dy2-labels"></div>
+        <p class="by">Change in cases reported, since last report.</p>
+
 		<p>Mumps patients associated with the outbreak include 298 females and 186 males across three states, from four months to 80 years of age, and 15 were hospitalized. Cases include residents in Columbus and Athens, Belmont, Cincinnati, Clark, Cuyahoga, Delaware, Fairfield, Franklin, Hamilton, Licking, Madison, Morrow, Muskingum, Pickaway, Ross, Tuscarawas, Union and Warren counties. The majority of cases were in Columbus and Delaware counties. The outbreak affected one person in Indiana and one person in North Carolina.<sup><a href="https://twitter.com/CPHOEP/status/479328431608692736">1</a></sup></p>
 		<p>Three to four cases were reported at Columbus State Community College.<sup><a href="http://www.nbc4i.com/story/25300367/mumps-outbreak-grows-to-253-cases">2</a></sup> Cases were reported in six<sup><a href="http://www.nbc4i.com/story/25322507/mumps-outbreak-grows-to-269-cases">3</a></sup> Olentangy Local Schools, leading school officials to tell students without the vaccine and with compromised immune systems to stay home.<sup><a href="http://www.dispatch.com/content/stories/local/2014/04/18/olentangy-students-without-mumps-vaccine-must-stay-home-for-25-days.html">4</a></sup> One member of the Ohio House staff was diagnosed with mumps.<sup><a href="http://dispatchpolitics.dispatch.com/content/blogs/the-daily-briefing/2014/05/05-05-14-house-mumps.html">5</a></sup> One case diagnosed at each of J.W. Reason Elementary, Brown Elementary and Hilliard Bradley High School in Hilliard.<sup><a href="http://www.dispatch.com/content/stories/local/2014/05/12/Hilliard-schools-warns-parents-about-mumps-cases.html">6</a></sup></p> 
 		<p>Local patients had the following complications:</p>
@@ -123,7 +43,9 @@
 			<li>Deafness</li>
 			<li>Hospitalization</li>
 		</ul></p>
-		
+
+        <hr>
+		<p class="caption"><strong>The final update to this page was posted October 4, 2014.</strong></p>
 		<hr>
 		
 		<h1 id="faq">Frequently Asked Questions</h1>
@@ -165,7 +87,6 @@
 &lt;iframe width="100%" height="400px" scrolling="no" frameborder="no"
 src="http://benlk.github.io/mumps/embed.html"&gt;&lt;/iframe&gt;
 		</pre></code>
-		<p>There's no tracking code on it now, but I will probably add one in the future.</p>
 		
 		<hr>
 		<p>Chart data taken from <a href="https://twitter.com/ColumbusHealth">Columbus Public Health</a> data.<br>
@@ -179,6 +100,8 @@ src="http://benlk.github.io/mumps/embed.html"&gt;&lt;/iframe&gt;
 		Built by <a href="https://twitter.com/benlkeith">@benlkeith</a>
   		</p>
 		
+		<script src="dygraph-combined.js"></script>
+        <script src="app.js"></script>
 	</body>
 </html>
 
